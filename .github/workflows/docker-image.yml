@@ -28,10 +28,12 @@ jobs:
     - name: Build docker image
       run: |
         docker build -t ultra7pr/docker-graphql:0.0.2 .
+        docker build -t ultra7pr/docker-graphql:latest .
 
     - name: Push docker image
       run: |
         docker push ultra7pr/docker-graphql:0.0.2
+        docker push ultra7pr/docker-graphql:latest
 
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
